@@ -1,8 +1,8 @@
-resource "aws_ami_from_instance" "demoami" {
-  name               = "demo-ubuntu-ami"
-  source_instance_id = "i-0fc4816e4519f9b7f"
+resource "aws_instance" "demo" {
+ami           = "ami-05bfa4a7765f38076"
+instance_type = "t2.micro"
 
-  tags = {
-    Name = "demo-ubuntu-ami"
-  }
+tags = {
+Name = "Terraform-Demo-EC2"
+}
 }
